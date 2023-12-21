@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+
+.bodyContainer {
+    background: 
+        url("../images/snake 1.jpg") left top / contain no-repeat,
+        url("../images/snake 2.jpg") right top / contain no-repeat;
+    min-height: 100vh;
+    min-width: 100vw; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.snakeBoard {
+    background-color: aqua;
+    width: 781px;
+    height: 0px;
+    margin-right: 33px;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+    box-sizing: border-box;
+    border: 5px solid rgb(0, 1, 60);
+}
+
+
+
+.food{
+    background-image: url("../images/coin.PNG");
+    background-size: 38px;
+    background-repeat: no-repeat;
+}
+
+/* Keyframes for zooming animation */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Zoom in */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.snakeHead {
+    background-image: url('../images/snakehead.PNG');
+    background-size: 35px;
+    background-repeat: no-repeat;
+    animation: zoomInOut 2s infinite; /* Applying zoomInOut animation */
+}
+
+.snakeBody{
+    background-color: rgb(255, 0, 0);
+    border: .25vmin solid rgb(255, 255, 255);
+    border-radius: 30px;
+    
+}
+
+.snakeTail{
+    background-color: rgb(255, 0, 0);
+    border: .55vmin solid rgb(255, 255, 255);
+    border-radius: 40px;
+    background-size: 20px;
+}
+
+.scoreContainer{
+    position: absolute;
+    top: 1px;
+    left: 7%;
+    font-size: 39px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 2px;
+    border-radius: 10px;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.highScoreContainer{
+    position: absolute;
+    top: 1px;
+    right: 5%;
+    font-size: 39px;
+    font-weight: bold;
+    color: rgb(4, 2, 2);
+    background-color: rgba(255, 255, 255, 0.2); 
+    padding: 2px;
+    border-radius: 10px;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+/* Author Hamza (gitdapper) */
